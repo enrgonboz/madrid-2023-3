@@ -20,24 +20,30 @@ export const Ranking = () => {
                     <strong>RANKING</strong>
                 </div>
                 <div className="selector_ranking">
+                    <div>
                     <h4>Tipos</h4>
                     <Select size="xs">
                         {TYPES.map((type) => (
                             <option value={type.value}>{type.label}</option>
                         ))}
                     </Select>
+                    </div>
+                    <div>
                     <h4>Fecha Inicio</h4>
                     <SingleDatepicker
                         name="date-input"
                         date={date}
                         onDateChange={setDate}
                     />
+                    </div>
+                    <div>
                     <h4>Fecha Fin</h4>
                     <SingleDatepicker
                         name="date-input"
                         date={date}
                         onDateChange={setDate}
                     />
+                    </div>
                 </div>
             </div>
             <Products />
